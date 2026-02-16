@@ -116,17 +116,17 @@ console.log(count);
 
 
 // Create a function that finds the largest number in an array.
-// let user = [{
-//     name: "Shahbaz",
-//     age: 25,
-//     city: "Karachi"
-// },{
-//     name: "Ali",
-//     age: 30,
-//     city: "Lahore"
-// },{
-//     name: "Ahmed",
-//     age: 8,
+let user = [{
+    name: "Shahbaz",
+    age: 25,
+    city: "Karachi"
+},{
+    name: "Ali",
+    age: 30,
+    city: "Lahore"
+},{
+    name: "Ahmed",
+    age: 8,
     city: "Islamabad"
 }];
 
