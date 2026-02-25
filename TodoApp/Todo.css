@@ -1,0 +1,154 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar styling */
+#navbar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+#navbar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#navbar #title {
+    font-size: 24px;
+}
+
+/* Section styling */
+section {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Nav buttons (Today, Pending, Overdue) */
+.nav_list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.nav_list button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav_list button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Input and add task button */
+section > div:nth-child(2) {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#inputText {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#btnTask {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btnTask:hover {
+    background-color: #45a049;
+}
+
+/* Tasks section */
+.Tasks h2 {
+    margin-bottom: 10px;
+}
+
+.add_tasks {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    min-height: 100px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.add_tasks ul {
+    list-style-type: none;
+}
+
+.add_tasks li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+}
+
+/* Buttons inside li */
+.add_tasks li button {
+    padding: 2px 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.add_tasks li button.edit {
+    background-color: orange;
+    color: white;
+}
+
+.add_tasks li button.delete {
+    background-color: red;
+    color: white;
+}
+
+/* Hover effects */
+.add_tasks li button:hover {
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    #inputText {
+        flex: 2;
+    }
+
+    .nav_list {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

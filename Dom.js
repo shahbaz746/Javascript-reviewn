@@ -11,7 +11,7 @@ let count = document.querySelector("#count");
 let search = document.querySelector("#search");
 
 let removedata = document.querySelector("#remove-data")
-
+let uldata = document.querySelector("#ul-data")
 let add_data = document.querySelector("#add_data");
 
 let data = ["shahbaz","Ali","Ahmed"]
@@ -23,16 +23,23 @@ add_data.addEventListener("click", () => {
 
     document.querySelector("#ul-data").appendChild(li);
 })
-data.map((name)=> {
-    const li = document.createElement("li");
-    li.textContent = name;
-    document.querySelector("#ul-data").appendChild(li);
+
+function render(){
+     uldata.innerHTML = ""; // clean ui
+data.forEach(name=> {
+    let li = document.createElement("li");
+        li.textContent = name;
+        uldata.appendChild(li)
 })
+
+}
+render();
 
 
 removedata.addEventListener("click",()=>{
    data.pop();
    console.log(data)
+   render();
 })
 
 
